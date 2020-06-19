@@ -14,7 +14,6 @@ public class FLTBackgroundGeolocationPlugin implements FlutterPlugin, ActivityAw
 
     /** Plugin registration. */
     public static void registerWith(PluginRegistry.Registrar registrar) {
-        BackgroundGeolocationModule module = BackgroundGeolocationModule.getInstance();
         module.onAttachedToEngine(registrar.context(), registrar.messenger());
         if (registrar.activity() != null) {
             module.setActivity(registrar.activity());
@@ -23,24 +22,20 @@ public class FLTBackgroundGeolocationPlugin implements FlutterPlugin, ActivityAw
 
     // @deprecated Called by Application#onCreate
     public static void setPluginRegistrant(PluginRegistry.PluginRegistrantCallback callback) {
-        HeadlessTask.setPluginRegistrant(callback);
     }
 
     public FLTBackgroundGeolocationPlugin() { }
 
     @Override
     public void onAttachedToEngine(FlutterPlugin.FlutterPluginBinding binding) {
-        BackgroundGeolocationModule.getInstance().onAttachedToEngine(binding.getApplicationContext(), binding.getBinaryMessenger());
     }
 
     @Override
     public void onDetachedFromEngine(@NonNull FlutterPlugin.FlutterPluginBinding binding) {
-        BackgroundGeolocationModule.getInstance().onDetachedFromEngine();
     }
 
     @Override
     public void onAttachedToActivity(ActivityPluginBinding activityPluginBinding) {
-        BackgroundGeolocationModule.getInstance().setActivity(activityPluginBinding.getActivity());
     }
 
     @Override
@@ -58,6 +53,5 @@ public class FLTBackgroundGeolocationPlugin implements FlutterPlugin, ActivityAw
 
     @Override
     public void onDetachedFromActivity() {
-        BackgroundGeolocationModule.getInstance().setActivity(null);
     }
 }
