@@ -14,10 +14,6 @@ public class FLTBackgroundGeolocationPlugin implements FlutterPlugin, ActivityAw
 
     /** Plugin registration. */
     public static void registerWith(PluginRegistry.Registrar registrar) {
-        module.onAttachedToEngine(registrar.context(), registrar.messenger());
-        if (registrar.activity() != null) {
-            module.setActivity(registrar.activity());
-        }
     }
 
     // @deprecated Called by Application#onCreate
