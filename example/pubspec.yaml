@@ -11,7 +11,9 @@ dependencies:
   unicorndial: ^1.1.4
 
   shared_preferences: ^0.5.6
-  background_fetch: ^0.5.3
+  background_fetch:
+    git:
+      url: git@github.com:nltb/flutter_background_fetch.git
   url_launcher: ^5.2.5
 
   # The following adds the Cupertino Icons font to your application.

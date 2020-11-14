@@ -91,8 +91,8 @@ class _RegistrationViewState extends State<RegistrationView> {
       );
     }
 
-    _orgnameController.value = TextEditingValue(text: _orgname, selection: TextSelection.collapsed(offset: _orgname.length));
-    _usernameController.value = TextEditingValue(text: _username, selection: TextSelection.collapsed(offset: _username.length));
+    _orgnameController.value = TextEditingValue(text: _orgname, selection: TextSelection.collapsed());
+    _usernameController.value = TextEditingValue(text: _username, selection: TextSelection.collapsed());
 
     return new Scaffold(
         appBar: new AppBar(
