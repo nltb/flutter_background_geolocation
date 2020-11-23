@@ -7,8 +7,7 @@ dependencies:
   flutter:
     sdk: flutter
   background_fetch:
-    git:
-      url: git@github.com:nltb/flutter_background_fetch.git
+    git: https://github.com/nltb/flutter_background_fetch.git
 
 
 flutter:
